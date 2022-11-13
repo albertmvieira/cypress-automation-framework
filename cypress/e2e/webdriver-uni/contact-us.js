@@ -3,7 +3,7 @@ import Contact_Us_PO from '../../support/pageObjects/webdriver-uni/Contact_Us_PO
 
 /// <reference types="cypress" />
 
-describe("Test Contact Us form via WebdriverUni", () => {
+describe("Test Contact Us form via WebdriverUni", {browser: 'electron' } , () => {
 
     //Usando timeout explicito apenas neste describe
     Cypress.config('defaultCommandTimeout', 20000)

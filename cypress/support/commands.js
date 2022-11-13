@@ -34,5 +34,3 @@ Cypress.Commands.add("webdriverUni_ContactForm_Submission", (firstName, lastName
   cy.get($selector).contains(textToLocate);
   cy.screenshot();
 })
-
-import 'cypress-file-upload';

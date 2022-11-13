@@ -32,8 +32,3 @@ Cypress.on("test:after:run", (test, runnable) => {
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
-//Command to disable logging of matching routes. This helps decluttering the logs when we're running interactive tests.
-// Cypress.Server.defaults({
-//     ignore: (xhr) => bool
-// })
