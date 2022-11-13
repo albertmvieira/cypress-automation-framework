@@ -5,19 +5,7 @@ describe("Test File Upload via webdriveruni", () => {
         cy.visit("http://www.webdriveruniversity.com")
         cy.get('#file-upload').invoke('removeAttr', 'target').click({force:true})
 
-        cy.fixture("laptop.png", "base64").then(fileContent => {
-            //documentation -> https://www.npmjs.com/package/cypress-file-upload
-            cy.get("#myFile").attachFile(
-                {
-                    fileContent,
-                    fileName: "laptop.png",
-                    mimeType: "image/png"
-                },
-                {
-                    uploadType: "input" //(Optional in this version)
-                }
-            )
-        })
+        cy.get("#myFile").selectFile("cypress/fixtures/laptop.png");
         cy.get("#submit-button").click();
     });
 
